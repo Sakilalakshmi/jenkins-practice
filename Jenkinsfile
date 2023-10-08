@@ -3,9 +3,9 @@ pipeline {
     options {
         timeout(time: 1, unit: 'HOURS') 
     }
-    triggers {
-        cron('* * * * *')
-    }
+    // triggers {
+    //     cron('* * * * *')
+    // }
     environment { 
         USER = 'sakila'
     }
@@ -61,19 +61,19 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
             }
         }
-//         stage('Input') {
-//             input {
-//                 message "Should we continue?"
-//                 ok "Yes, we should."
-//                 submitter "alice,bob"
-//                 parameters {
-//                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-//                 }
-//             }
-//             steps {
-//                 echo "Hello, ${PERSON}, nice to meet you."
-//             }
-//         }
+        stage('Input') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
+            }
+            steps {
+                echo "Hello, ${PERSON}, nice to meet you."
+            }
+        }
 //         stage('PROD Deploy'){
 //             when {
 //                 environment name: 'USER', value: 'sivakumar'
