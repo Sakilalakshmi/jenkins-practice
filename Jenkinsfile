@@ -48,19 +48,19 @@ pipeline {
                 sh 'printenv'
             }
         }
-//         stage('Params') {
-//             steps {
-//                 echo "Hello ${params.PERSON}"
+        stage('Params') {
+            steps {
+                echo "Hello ${params.PERSON}"
 
-//                 echo "Biography: ${params.BIOGRAPHY}"
+                echo "Biography: ${params.BIOGRAPHY}"
 
-//                 echo "Toggle: ${params.TOGGLE}"
+                echo "Toggle: ${params.TOGGLE}"
 
-//                 echo "Choice: ${params.CHOICE}"
+                echo "Choice: ${params.CHOICE}"
 
-//                 echo "Password: ${params.PASSWORD}"
-//             }
-//         }
+                echo "Password: ${params.PASSWORD}"
+            }
+        }
 //         stage('Input') {
 //             input {
 //                 message "Should we continue?"
