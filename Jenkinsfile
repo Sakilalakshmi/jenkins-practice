@@ -30,6 +30,13 @@ pipeline {
                 //error 'This is the failure'
             }
         }
+        stage('Example') {
+            environment { 
+                AUTH = credentials('ssh-auth') 
+            }
+            steps {
+                sh 'printenv'
+            }
     }
 
     post { 
