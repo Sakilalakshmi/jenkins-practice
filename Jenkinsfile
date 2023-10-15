@@ -40,14 +40,14 @@ pipeline {
             }
         }
 
-//         stage('Example') {
-//             environment { 
-//                 AUTH = credentials('ssh-auth') 
-//             }
-//             steps {
-//                 sh 'printenv'
-//             }
-//         }
+        stage('Example') {
+            environment { 
+                AUTH = credentials('ssh-auth') 
+            }
+            steps {
+                sh 'printenv'
+            }
+        }
 //         stage('Params') {
 //             steps {
 //                 echo "Hello ${params.PERSON}"
