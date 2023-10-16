@@ -74,14 +74,14 @@ pipeline {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
         }
-//         stage('PROD Deploy'){
-//             when {
-//                 environment name: 'USER', value: 'sakila'
-//             }
-//             steps{
-//                 echo "deploying to PROD"
-//             }
-//         }
+        stage('PROD Deploy'){
+            when {
+                environment name: 'USER', value: 'sakila'
+            }
+            steps{
+                echo "deploying to PROD"
+            }
+        }
 //         stage('Parallel Stage') {
  
 //             parallel {
